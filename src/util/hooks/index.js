@@ -1,3 +1,3 @@
-// import { useMobile } from './useMobile'
+import { useMarked } from './useMarked'
 
-// export { useMobile }
+export { useMarked }

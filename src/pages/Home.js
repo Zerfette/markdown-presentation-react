@@ -1,13 +1,20 @@
-import React from 'react'
-import marked from 'marked'
-import renderHTML from 'react-render-html'
+import React, { useState } from 'react'
+
 //LOCAL
-import {} from '@ui'
+import { useMarked } from '@util/hooks'
 
 const Home = () => {
+  const [input, $input] = useState('')
+  const handleChange = ev => $input(ev.target.value)
+  const Display = useMarked(input)
+  console.log(input)
 
-  const test = renderHTML(marked('# Test \n - test'))
-  return <>{test}</>
+  return (
+    <>
+      <textarea rows='6' value={input} onChange={handleChange} />
+      {Display}
+    </>
+  )
 }
 
 export default Home
