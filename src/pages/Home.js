@@ -7,7 +7,6 @@ const Home = () => {
   const [input, $input] = useState('')
   const handleChange = ev => $input(ev.target.value)
   const Display = useMarked(input)
-  console.log(input)
 
   return (
     <>
