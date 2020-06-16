@@ -1,4 +1,4 @@
-// import Menu from './Menu'
+import SlideNav from './SlideNav'
+import SlideThumbnail from './SlideThumbnail'
 
-
-//export { Menu }
+export { SlideNav, SlideThumbnail }
