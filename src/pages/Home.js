@@ -1,9 +1,13 @@
 import React from 'react'
+import marked from 'marked'
+import renderHTML from 'react-render-html'
 //LOCAL
 import {} from '@ui'
 
 const Home = () => {
-  return <>This is a test</>
+
+  const test = renderHTML(marked('# Test \n - test'))
+  return <>{test}</>
 }
 
 export default Home
