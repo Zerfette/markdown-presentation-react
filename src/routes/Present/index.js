@@ -28,11 +28,7 @@ const Present = ({ history }) => {
   }
 
   return (
-    <div
-    style={{ outline: 'none' }}
-    tabIndex='0'
-    onKeyDown={keyListener}
-    >
+    <div style={{ outline: 'none' }} tabIndex='0' onKeyDown={keyListener}>
       <Link to={'/'}>
         <button
           onClick={() => {}}

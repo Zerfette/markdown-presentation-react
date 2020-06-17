@@ -10,7 +10,7 @@ const Editor = () => {
         onClick={() => dp({ type: 'PREVIOUS_SLIDE' })}
         style={{ margin: 16, fontSize: 32, cursor: 'pointer' }}
       >
-        <i className='fas fa-angle-left'/>
+        <i className='fas fa-angle-left' />
       </button>
       <textarea
         rows='12'
@@ -22,7 +22,7 @@ const Editor = () => {
         onClick={() => dp({ type: 'NEXT_SLIDE' })}
         style={{ margin: 16, fontSize: 32, cursor: 'pointer' }}
       >
-        <i className='fas fa-angle-right'/>
+        <i className='fas fa-angle-right' />
       </button>
     </div>
   )
