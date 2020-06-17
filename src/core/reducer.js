@@ -13,7 +13,7 @@ const reducer = ({ slides, currentSlide }, action) => {
       if (currentSlide > 0) currentSlide--
       return { slides, currentSlide }
     case 'GO_TO_SLIDE':
-      currentSlide = slides.indexOf(action.payload)
+      currentSlide = action.payload
       return { slides, currentSlide }
     case 'NEXT_SLIDE':
       if (currentSlide < slides.length - 1) currentSlide++

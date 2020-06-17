@@ -22,18 +22,18 @@ const SlideThumbnail = (slide, i, isCurrentSlide) => {
           })
         }
         style={{
-          fontSize: '8px',
-          height: '16px',
+          fontSize: 16,
         }}
       >
-        DELETE
+        <i class='fas fa-trash'/>
       </button>
       <div
         style={{
           border: `${isCurrentSlide ? 2 : 1}px solid`,
           margin: `${isCurrentSlide ? 7 : 8}px`,
           padding: '0px 4px',
-          fontSize: 8,
+          fontSize: 6,
+          // lineHeight: 8,
           height: 100,
           width: 150,
           cursor: 'pointer',
@@ -42,7 +42,7 @@ const SlideThumbnail = (slide, i, isCurrentSlide) => {
         onClick={() => {
           dp({
             type: 'GO_TO_SLIDE',
-            payload: slide,
+            payload: i,
           })
         }}
       >
