@@ -1,10 +1,10 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 //LOCAL
 import { useMarked } from '@util/hooks'
 
-const SlideThumbnail = (slide, i, isCurrentSlide) => {
+const SlideThumbnail = ({ slide, i, isCurrent }) => {
   const dp = useDispatch()
   return (
     <div
@@ -25,15 +25,14 @@ const SlideThumbnail = (slide, i, isCurrentSlide) => {
           fontSize: 16,
         }}
       >
-        <i class='fas fa-trash'/>
+        <i className='fas fa-trash' />
       </button>
       <div
         style={{
-          border: `${isCurrentSlide ? 2 : 1}px solid`,
-          margin: `${isCurrentSlide ? 7 : 8}px`,
+          border: `${isCurrent ? 2 : 1}px solid`,
+          margin: `${isCurrent ? 7 : 8}px`,
           padding: '0px 4px',
           fontSize: 6,
-          // lineHeight: 8,
           height: 100,
           width: 150,
           cursor: 'pointer',
