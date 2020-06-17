@@ -9,9 +9,9 @@ const Previewer = () => {
 
   return (
     <div
-      style={{ margin: 16, border: '1px solid', height: '60vh', width: '90vh' }}
+      style={{ margin: 16, border: '1px solid', height: '60vh', width: '90vh', overflow: 'hidden' }}
     >
-      <div style={{ margin: 16 }}>{useMarked(slides[currentSlide])}</div>
+      <div style={{ margin: 16}}>{useMarked(slides[currentSlide])}</div>
     </div>
   )
 }

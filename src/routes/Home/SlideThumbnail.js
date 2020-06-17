@@ -37,6 +37,7 @@ const SlideThumbnail = ({ slide, i, isCurrent }) => {
           width: 150,
           cursor: 'pointer',
           textAlign: 'left',
+          overflow: 'hidden'
         }}
         onClick={() => {
           dp({

@@ -60,6 +60,7 @@ const Present = ({ history }) => {
             height: '80vh',
             width: '120vh',
             maxWidth: '100vw',
+            overflow: 'hidden',
           }}
         >
           <div style={{ margin: 16 }}>{useMarked(slides[currentSlide])}</div>
