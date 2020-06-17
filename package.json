@@ -39,9 +39,7 @@
   "_moduleAliasIgnoreWarning": true,
   "_moduleAliases": {
     "@routes": "src/routes",
-    "@style": "src/style",
-    "@ui": "src/ui",
-    "@util": "src/util",
+    "@hooks": "src/hooks",
     "@core": "src/core"
   }
 }

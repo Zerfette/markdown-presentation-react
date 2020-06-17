@@ -1,28 +1,48 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 //LOCAL
-import { useMarked } from '@util/hooks'
+import { useMarked } from '@hooks'
 import PresentationNav from './PresentationNav'
 
-const Present = () => {
+const Present = ({ history }) => {
+  const dp = useDispatch()
   const { slides, currentSlide } = useSelector((state) => state)
- 
+
+  const keyListener = (ev) => {
+    const { keyCode } = ev
+    switch (keyCode) {
+      case 27:
+        history.push('/')
+        break
+      case 37:
+        dp({ type: 'PREVIOUS_SLIDE' })
+        break
+      case 39:
+        dp({ type: 'NEXT_SLIDE' })
+        break
+      default:
+        return
+    }
+  }
+
   return (
-    <>
+    <div
+    style={{ outline: 'none' }}
+    tabIndex='0'
+    onKeyDown={keyListener}
+    >
       <Link to={'/'}>
         <button
           onClick={() => {}}
           style={{
             width: '100%',
-            // height: 50,
             backgroundColor: '#555555',
             color: 'white',
-            // fontSize: 24,
           }}
         >
-          <i class='fas fa-times-circle' style={{ margin: 8 }} />
+          <i className='fas fa-times-circle' style={{ margin: 8 }} />
           EXIT PRESENTATION
         </button>
       </Link>
@@ -46,7 +66,7 @@ const Present = () => {
         </div>
         <PresentationNav />
       </div>
-    </>
+    </div>
   )
 }
 

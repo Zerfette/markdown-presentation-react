@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 
 //LOCAL
-import { useMarked } from '@util/hooks'
+import { useMarked } from '@hooks'
 
 const SlideThumbnail = ({ slide, i, isCurrent }) => {
   const dp = useDispatch()

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 
 //LOCAL
 import * as serviceWorker from './serviceWorker'
-import '@style/index.css'
+import './index.css'
 import App from './App'
 import store from '@core'
 

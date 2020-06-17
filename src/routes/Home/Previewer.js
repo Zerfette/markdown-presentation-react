@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 //LOCAL
-import { useMarked } from '@util/hooks'
+import { useMarked } from '@hooks'
 
 const Previewer = () => {
   const { slides, currentSlide } = useSelector((state) => state)

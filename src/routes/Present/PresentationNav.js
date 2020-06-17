@@ -12,7 +12,7 @@ const PresentationNav = () => {
         onClick={() => dp({ type: 'PREVIOUS_SLIDE' })}
         style={{ margin: 8, fontSize: 32, cursor: 'pointer' }}
       >
-        <i class='fas fa-angle-left' />
+        <i className='fas fa-angle-left' />
       </button>
       <div style={{ flexGrow: 1, border: '1px solid' }}>
         <div
@@ -31,7 +31,7 @@ const PresentationNav = () => {
         onClick={() => dp({ type: 'NEXT_SLIDE' })}
         style={{ margin: 8, fontSize: 32, cursor: 'pointer' }}
       >
-        <i class='fas fa-angle-right' />
+        <i className='fas fa-angle-right' />
       </button>
     </div>
   )
